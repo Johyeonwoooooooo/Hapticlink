@@ -80,7 +80,7 @@ PS5도 지원 게임도 필요 없다.
 
 ## 내려받기
 
-Windows용 프로그램은 [Releases](https://github.com/Johyeonwoooooooo/Hapticlink/releases)에 올라온다. 1.0 버전을 준비 중이고, 아직 올라온 것은 없다.
+Windows용 프로그램은 [Releases](https://github.com/Johyeonwoooooooo/Hapticlink/releases)에 올라온다. 최신 릴리스에서 `Hapticlink-Setup-<버전>.exe` 를 받아 실행하면 된다.
 
 이 저장소에는 릴리스와 이 문서만 있다. 소스 코드는 공개하지 않는다.
 

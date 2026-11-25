@@ -80,7 +80,7 @@ Battery level and charging state stay in the header. The interface switches betw
 
 ## Download
 
-The Windows program is published under [Releases](https://github.com/Johyeonwoooooooo/Hapticlink/releases). Version 1.0 is being prepared; nothing is published there yet.
+The Windows program is published under [Releases](https://github.com/Johyeonwoooooooo/Hapticlink/releases). Download `Hapticlink-Setup-<version>.exe` from the latest release and run it.
 
 This repository holds the releases and this page. The source code is not public.
 
