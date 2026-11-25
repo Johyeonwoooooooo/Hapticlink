@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases/download/v1.0.0/Hapticlink-Setup-1.0.0.exe"><img src="https://img.shields.io/badge/Windows%EC%9A%A9%20%EB%82%B4%EB%A0%A4%EB%B0%9B%EA%B8%B0%20%C2%B7%201.0.0-2f7bff?style=for-the-badge" alt="Windows용 내려받기 · 1.0.0" height="44"></a>
+  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases/download/v1.0.1/Hapticlink-Setup-1.0.1.exe"><img src="https://img.shields.io/badge/Windows%EC%9A%A9%20%EB%82%B4%EB%A0%A4%EB%B0%9B%EA%B8%B0%20%C2%B7%201.0.1-2f7bff?style=for-the-badge" alt="Windows용 내려받기 · 1.0.1" height="44"></a>
 </p>
 
 <p align="center">
@@ -106,6 +106,7 @@ PS5도, 지원 게임도 필요하지 않습니다.
 
 - Hapticlink와 함께, 게임 연결에 필요한 드라이버 두 개가 설치됩니다: [usbip-win2](https://github.com/vadimgrn/usbip-win2) 0.9.8.1, [HidHide](https://github.com/nefarius/HidHide) 1.5.230. 각 제작자가 서명한 설치 파일을 그대로 사용하며, 설치 중에 따로 내려받는 것은 없습니다.
 - Windows를 다시 시작해야 할 수 있습니다.
+- 처음 실행하면 사용할 언어와 Windows를 시작할 때 함께 켤지를 묻습니다. 둘 다 나중에 바꿀 수 있습니다.
 - 아직 코드 서명이 되어 있지 않습니다. "Windows의 PC 보호" 창이 뜨면 *추가 정보* → *실행*을 눌러 주세요.
 - 프로그램을 제거하면 이 설치 파일이 넣은 드라이버도 함께 지워집니다. 원래 PC에 있던 드라이버는 건드리지 않습니다.
 

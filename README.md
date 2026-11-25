@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases/download/v1.0.0/Hapticlink-Setup-1.0.0.exe"><img src="https://img.shields.io/badge/Download%20for%20Windows%20%C2%B7%201.0.0-2f7bff?style=for-the-badge" alt="Download for Windows · 1.0.0" height="44"></a>
+  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases/download/v1.0.1/Hapticlink-Setup-1.0.1.exe"><img src="https://img.shields.io/badge/Download%20for%20Windows%20%C2%B7%201.0.1-2f7bff?style=for-the-badge" alt="Download for Windows · 1.0.1" height="44"></a>
 </p>
 
 <p align="center">
@@ -106,6 +106,7 @@ Please download the installer from the button at the top, or from [Releases](htt
 
 - Along with Hapticlink, it installs the two drivers the game bridge needs: [usbip-win2](https://github.com/vadimgrn/usbip-win2) 0.9.8.1 and [HidHide](https://github.com/nefarius/HidHide) 1.5.230. Each comes with its maker's own signed installer, and nothing is downloaded during installation.
 - Windows may ask you to restart.
+- The first time it runs, Hapticlink asks which language to use and whether it should start with Windows. You can change both later.
 - The build is not code-signed yet. If you see the "Windows protected your PC" screen, please choose *More info*, then *Run anyway*.
 - Uninstalling also removes the drivers this installer put in. Drivers that were already on your PC are left untouched.
 
