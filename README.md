@@ -129,6 +129,22 @@ No, they do not. They apply only while that tab is open, and a running game's ow
 **Does it send anything to a server?**
 No, it does not. There are no accounts, no telemetry and no update checks. The program is built so that it cannot even look up a host name.
 
+## Contact
+
+<p>
+  <a href="mailto:hyunwoo02031@naver.com"><img src="https://img.shields.io/badge/Email-hyunwoo02031%40naver.com-2f7bff?style=for-the-badge" alt="Email: hyunwoo02031@naver.com"></a>
+  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/issues/new"><img src="https://img.shields.io/badge/GitHub-Open%20an%20issue-1b2233?style=for-the-badge" alt="Open an issue on GitHub"></a>
+</p>
+
+If something does not work, or a game does not respond the way you expected, please let us know by opening an [issue](https://github.com/Johyeonwoooooooo/Hapticlink/issues). It helps a great deal if you include:
+
+- your Hapticlink version (shown in the About tab) and your Windows version;
+- how the pad is connected (Bluetooth, or by cable);
+- the game, and whether Steam Input is on or off for it;
+- what you did, what you expected, and what happened instead.
+
+Before opening a new issue, please have a quick look at the [existing ones](https://github.com/Johyeonwoooooooo/Hapticlink/issues) in case yours is already there. For anything you would rather not post in public, you are welcome to write by email.
+
 ## Licence
 
 Hapticlink is free for you to use. It is not open source, however; please see [LICENSE](LICENSE) for the details.

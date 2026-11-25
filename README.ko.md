@@ -129,6 +129,22 @@ PC에서 유선 DualSense의 햅틱과 적응형 트리거를 지원하는 게�
 **서버로 무언가 보내나요?**
 보내지 않습니다. 계정도, 사용 기록 수집도, 업데이트 확인도 없습니다. 프로그램이 호스트 이름을 조회하는 것조차 할 수 없도록 만들어져 있습니다.
 
+## 문의
+
+<p>
+  <a href="mailto:hyunwoo02031@naver.com"><img src="https://img.shields.io/badge/Email-hyunwoo02031%40naver.com-2f7bff?style=for-the-badge" alt="이메일: hyunwoo02031@naver.com"></a>
+  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/issues/new"><img src="https://img.shields.io/badge/GitHub-%EC%9D%B4%EC%8A%88%20%EB%82%A8%EA%B8%B0%EA%B8%B0-1b2233?style=for-the-badge" alt="GitHub에 이슈 남기기"></a>
+</p>
+
+동작하지 않는 부분이 있거나 게임이 기대와 다르게 반응한다면 [이슈](https://github.com/Johyeonwoooooooo/Hapticlink/issues)로 알려 주세요. 아래 내용을 함께 적어 주시면 큰 도움이 됩니다.
+
+- Hapticlink 버전(정보 탭에 표시됩니다)과 Windows 버전
+- 패드 연결 방식(블루투스 또는 케이블)
+- 게임 이름, 그리고 그 게임에서 Steam Input을 켰는지 껐는지
+- 무엇을 하셨는지, 어떻게 되기를 기대하셨는지, 실제로는 어떻게 되었는지
+
+새 이슈를 남기기 전에 [기존 이슈](https://github.com/Johyeonwoooooooo/Hapticlink/issues)에 같은 내용이 있는지 한 번 살펴봐 주세요. 공개적으로 적기 어려운 내용은 이메일로 보내 주셔도 좋습니다.
+
 ## 라이선스
 
 Hapticlink는 무료로 사용하실 수 있습니다. 다만 오픈 소스는 아닙니다. 자세한 내용은 [LICENSE](LICENSE)를 참고해 주세요.
