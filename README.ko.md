@@ -1,5 +1,13 @@
 <p align="center">
-  <img src="docs/banner.jpg" alt="DualSense Test Panel: 꽂고, 돌리면, 어디가 고장인지 나온다" width="100%">
+  <img src="docs/banner.ko.jpg" alt="Hapticlink: 동글 없이 블루투스로 햅틱 피드백, 적응형 트리거, 스피커를 지원합니다" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases/download/v1.0.0/Hapticlink-Setup-1.0.0.exe"><img src="https://img.shields.io/badge/Windows%EC%9A%A9%20%EB%82%B4%EB%A0%A4%EB%B0%9B%EA%B8%B0%20%C2%B7%201.0.0-2f7bff?style=for-the-badge" alt="Windows용 내려받기 · 1.0.0" height="44"></a>
+</p>
+
+<p align="center">
+  <sub>Windows 10/11 64비트 · 161 MB · 아직 코드 서명 없음: "Windows의 PC 보호" 창에서 <i>추가 정보</i> → <i>실행</i> · <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases">모든 릴리스</a></sub>
 </p>
 
 <p align="center">
@@ -11,100 +19,126 @@
 
 <p align="center">
   <a href="https://github.com/Johyeonwoooooooo/Hapticlink/stargazers"><img src="https://img.shields.io/github/stars/Johyeonwoooooooo/Hapticlink?style=flat-square&color=111111&label=stars" alt="Stars"></a>
-  <img src="https://img.shields.io/badge/WebHID-Chrome%20%C2%B7%20Edge-111111?style=flat-square" alt="WebHID: Chrome, Edge">
+  <img src="https://img.shields.io/badge/Windows-10%20%C2%B7%2011-111111?style=flat-square" alt="Windows 10, 11">
   <img src="https://img.shields.io/badge/%EC%98%A8%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4-%EC%99%B8%EB%B6%80%20%EC%A0%84%EC%86%A1%20%EC%97%86%EC%9D%8C-111111?style=flat-square" alt="온디바이스, 외부 전송 없음">
   <img src="https://img.shields.io/badge/%EC%96%B8%EC%96%B4-%ED%95%9C%EA%B5%AD%EC%96%B4%20%C2%B7%20English-111111?style=flat-square" alt="한국어, English">
 </p>
 
 ---
 
-브라우저에서 바로 도는 DualSense 테스터.
+Hapticlink는 DualSense 컨트롤러를 위한 Windows 프로그램입니다. 두 가지 일을 합니다.
 
-전부 내 컴퓨터 안에서 끝난다. 페이지는 외부 리소스를 불러오지 않고 아무 데도 보내지 않는다. 패드는 브라우저와만 이야기한다.
+**무선 패드를 게임에서 유선처럼 쓸 수 있게 해 줍니다.** 패드를 블루투스로 연결하고 Hapticlink를 켠 뒤 게임을 시작하면 됩니다. 햅틱 피드백, 적응형 트리거, 패드 스피커가 케이블도 동글도 없이 동작합니다.
 
-중고 패드를 사기 전에, 스틱 쏠림이 의심될 때, 수리를 끝낸 뒤에 쓴다. 패드를 꽂고 화면이 시키는 대로 하면 부품별로 정상인지 이상인지가 나온다.
+**패드가 멀쩡한지 알려 드립니다.** 중고 패드를 사기 전, 스틱 쏠림이 의심될 때, 수리를 받은 뒤에 써 보세요. 화면의 안내를 따라 하면 부품별로 정상인지 이상인지 알 수 있습니다.
+
+모든 일은 내 PC 안에서 끝납니다. Hapticlink는 사용자와 컴퓨터에 관한 어떤 정보도 밖으로 보내지 않으며, 외부로 연결하지 않습니다.
+
+## 무선인데, 유선에서 되던 것이 다 됩니다
+
+![게임 연결 탭: 스위치, 패드와 게임 상태, 햅틱 세기, 케이블과 자동 실행 설정](docs/game.png)
+
+블루투스로 연결한 DualSense는 Windows 게임에 평범한 게임패드로만 보입니다. 햅틱도, 트리거 효과도, 스피커도 쓸 수 없습니다. 게임이 이런 기능을 케이블로 연결된 패드에만 보내기 때문입니다.
+
+Hapticlink는 게임에 유선 DualSense를 보여 주고, 게임이 보내는 것을 모두 블루투스로 실제 패드에 전달합니다. 게임에서 따로 설정하실 것은 없습니다.
+
+- **햅틱 세기**: 0~300% 범위에서 조절할 수 있고, 게임 중에도 바로 적용됩니다.
+- **케이블은 충전만**: 게임 도중에 케이블을 꽂아도 아무것도 바뀌지 않습니다. 유선 품질로 쓰고 싶을 때는 버튼 하나로 전환할 수 있고, 케이블을 뽑으면 다시 무선으로 돌아옵니다.
+- **방해하지 않습니다**: 트레이에 조용히 머물고, Windows를 시작할 때 함께 켜지도록 할 수 있으며, 종료하면 모든 것을 원래대로 돌려놓습니다.
 
 ## 1분 진단
 
 ![모션 센서 단계: 주황색 목표 자세에 패드를 겹친다](docs/motion.png)
 
-다섯 단계가 차례로 지나간다. 규칙은 하나다. **주황색을 따라가면 통과.**
+다섯 단계가 차례로 진행됩니다. 규칙은 하나뿐입니다. **주황색을 따라가면 통과합니다.**
 
-기준을 넘으면 알아서 다음 단계로 넘어간다. 한동안 진행이 없으면 그 부품을 이상으로 적고 넘어간다. 버튼을 누를 필요가 없다.
+기준을 넘으면 자동으로 다음 단계로 넘어갑니다. 한동안 진행이 없으면 그 부품을 이상으로 기록하고 넘어갑니다. 버튼을 따로 누르실 필요가 없습니다.
 
 | 단계 | 하는 일 | 이상으로 보는 것 |
 | --- | --- | --- |
-| 스틱 | 주황 점을 따라 한 바퀴 돌리고 손 떼기 | 끝까지 안 닿는 방향, 손을 뗀 뒤 중앙에서 8% 넘게 벗어남 |
-| 버튼 | 3D 패드에서 깜빡이는 버튼 19개를 차례로 | 5초 안에 입력이 안 들어옴 |
-| 트리거 | 주황 트리거 깊이에 내 트리거 맞추기 | 중간에 못 머묾, 0이나 255가 안 나옴 |
-| 터치패드 | 72칸 전부 칠하기 | 끝까지 안 칠해지는 칸 |
-| 모션 센서 | 주황 자세에 패드 겹치기, 좌우로 비틀기 | 기울기를 못 읽음, 자이로 축이 무반응, 가만히 있는데 3°/초 넘게 돎 |
+| 스틱 | 주황 점을 따라 한 바퀴 돌리고 손 떼기 | 끝까지 닿지 않는 방향, 손을 뗀 뒤 중앙에서 8% 넘게 벗어남 |
+| 버튼 | 3D 패드에서 깜빡이는 버튼 19개를 차례로 누르기 | 5초 안에 입력이 들어오지 않음 |
+| 트리거 | 주황 트리거 깊이에 내 트리거 맞추기 | 중간에 머물지 못함, 0이나 255가 나오지 않음 |
+| 터치패드 | 72칸 전부 칠하기 | 끝까지 칠해지지 않는 칸 |
+| 모션 센서 | 주황 자세에 패드 겹치기, 좌우로 비틀기 | 기울기를 읽지 못함, 자이로 축이 반응하지 않음, 가만히 있는데 초당 3° 넘게 회전 |
 
 ![스틱 단계: 스틱이 닿은 범위가 도형으로 채워진다](docs/sticks.png)
 
-스틱은 지나간 범위가 그대로 도형이 된다. 찌그러진 곳이 안 닿는 방향이다.
+스틱이 지나간 범위는 그대로 도형이 됩니다. 찌그러진 곳이 스틱이 닿지 않는 방향입니다.
 
-## 결과는 부품별로
+## 결과는 부품별로 알려 드립니다
 
 ![결과표: 부품마다 정상 또는 이상, 그리고 수치](docs/result.png)
 
-끝나면 카드 다섯 장이 남는다. 정상이면 수치가, 이상이면 무엇이 안 됐는지가 적힌다. "L3 입력 안 됨", "R 스틱 ↗ 방향 끝까지 안 닿음" 같은 식이다. 판매 글이나 A/S 접수에 그대로 붙이면 된다.
+진단이 끝나면 카드 다섯 장이 남습니다. 정상이면 수치가, 이상이면 무엇이 안 됐는지가 적힙니다. "L3 입력 안 됨", "R 스틱 ↗ 방향 끝까지 안 닿음" 같은 식입니다. 판매 글이나 A/S 접수에 그대로 붙여 쓰셔도 좋습니다.
 
-## 트리거와 진동을 눈으로
+## 트리거와 진동을 눈으로 확인하세요
 
 ![체험 탭: 트리거 저항 곡선과 모터 파형](docs/play.png)
 
-적응형 트리거가 뭔지 말로는 설명이 안 된다. 그래서 그렸다.
+적응형 트리거가 어떤 느낌인지는 말로 설명하기 어렵습니다. 그래서 그림으로 보여 드립니다.
 
-트리거 느낌을 고르면 저항이 어디서 걸리는지 곡선으로 나오고, 당기면 점이 곡선 위를 따라간다. 권총은 중간에 턱이 있고, 활시위는 끝으로 갈수록 무거워지고, 기관총은 떨린다. 진동 패턴은 좌우 모터 파형으로 흐른다.
+트리거 느낌을 고르면 저항이 어디서 걸리는지 곡선으로 나타나고, 트리거를 당기면 점이 곡선 위를 따라갑니다. 권총은 중간에 턱이 있고, 활시위는 끝으로 갈수록 무거워지며, 기관총은 떨립니다. 진동 패턴은 좌우 모터의 파형으로 흘러갑니다.
 
-블루투스로 연결하면 패턴이 진동 모터가 아니라 패드의 진동자에서 HD 햅틱으로 나온다. 브라우저에서 바로.
+블루투스로 연결하면 패턴이 진동 모터가 아니라 패드의 진동자에서 HD 햅틱으로 재생됩니다.
 
-PS5도 지원 게임도 필요 없다.
+PS5도, 지원 게임도 필요하지 않습니다.
 
-## 눌린 대로 움직이는 3D
+## 누른 대로 움직이는 3D 패드
 
 ![컨트롤러 탭: 3D 패드가 입력에 반응한다](docs/controller.png)
 
-버튼은 빛나고, 스틱은 기울고, 트리거는 당겨진다. 패드를 세우면 모델이 숙여져서 L1·L2·R1·R2가 보인다. 터치패드로 그림도 그려진다.
+버튼을 누르면 빛나고, 스틱은 기울며, 트리거는 당겨집니다. 패드를 세우면 모델이 숙여져 L1·L2·R1·R2가 보입니다. 터치패드로 그림도 그릴 수 있습니다.
 
-## 그 밖에
+## 그 밖의 기능
 
 | 탭 | 내용 |
 | --- | --- |
-| 적응형 트리거 | L2/R2 각각 끔 · 저항 · 방아쇠 · 진동. 슬라이더를 움직이면 바로 적용 |
+| 적응형 트리거 | L2/R2 각각 끔 · 저항 · 방아쇠 · 진동을 고를 수 있고, 슬라이더를 움직이면 바로 적용됩니다 |
 | 조명 · 진동 | 라이트바 색, 플레이어 LED, 마이크 LED, 좌우 모터 |
-| 모션 | 패드 기울기를 그대로 따라가는 3D 모델 |
+| 모션 | 패드의 기울기를 그대로 따라가는 3D 모델 |
 
-배터리 잔량과 충전 상태는 항상 위에 떠 있다. 화면은 한국어와 영어로 바뀐다.
+배터리 잔량과 충전 상태는 항상 화면 위쪽에 표시됩니다. 화면 언어는 한국어와 영어 중에서 고를 수 있습니다.
 
-## 내려받기
+## 설치
 
-Windows용 프로그램은 [Releases](https://github.com/Johyeonwoooooooo/Hapticlink/releases)에 올라온다. 최신 릴리스에서 `Hapticlink-Setup-<버전>.exe` 를 받아 실행하면 된다.
+맨 위 버튼이나 [Releases](https://github.com/Johyeonwoooooooo/Hapticlink/releases)에서 설치 파일을 받아 실행해 주세요.
 
-이 저장소에는 릴리스와 이 문서만 있다. 소스 코드는 공개하지 않는다.
+- Hapticlink와 함께, 게임 연결에 필요한 드라이버 두 개가 설치됩니다: [usbip-win2](https://github.com/vadimgrn/usbip-win2) 0.9.8.1, [HidHide](https://github.com/nefarius/HidHide) 1.5.230. 각 제작자가 서명한 설치 파일을 그대로 사용하며, 설치 중에 따로 내려받는 것은 없습니다.
+- Windows를 다시 시작해야 할 수 있습니다.
+- 아직 코드 서명이 되어 있지 않습니다. "Windows의 PC 보호" 창이 뜨면 *추가 정보* → *실행*을 눌러 주세요.
+- 프로그램을 제거하면 이 설치 파일이 넣은 드라이버도 함께 지워집니다. 원래 PC에 있던 드라이버는 건드리지 않습니다.
 
-## 자주 묻는 것
+## 자주 묻는 질문
 
-**블루투스로도 되나요?**
-된다. 패드를 PC에 페어링하고 평소처럼 연결하면 된다. USB 유선과 Pico 2 W 동글([awalol/DS5Dongle](https://github.com/awalol/DS5Dongle))도 된다.
+**어떤 게임에서 되나요?**
+PC에서 유선 DualSense의 햅틱과 적응형 트리거를 지원하는 게임에서 됩니다. 게임이 Steam Input을 사용한다면 켠 상태와 끈 상태를 모두 시도해 보세요. 게임마다 맞는 설정이 다릅니다.
 
-**여기서 맞춘 트리거가 게임에도 남나요?**
-안 남는다. 그 탭을 열어둔 동안만 패드에 적용되고, 탭을 옮기면 꺼진다. 게임이 켜져 있으면 게임이 덮어쓴다.
+**무선도 유선만큼 센가요?**
+조금 약합니다. 블루투스는 케이블보다 담을 수 있는 정보가 적어서 같은 효과가 살짝 부드럽게 느껴집니다. 햅틱 세기 슬라이더로 대부분 보완할 수 있습니다.
 
-**Firefox에서는요?**
-WebHID가 없어서 안 된다.
+**케이블을 꽂았는데 아무것도 안 바뀌어요.**
+의도된 동작입니다. 케이블은 충전만 하고 게임은 무선으로 계속됩니다. 케이블로 직접 연결해 쓰고 싶으시면 게임 연결 탭에서 "이번만 케이블로 직접 연결"을 누른 뒤 게임을 다시 시작해 주세요.
+
+**케이블을 뽑으니 패드가 꺼졌어요.**
+케이블로 직접 연결해 쓴 뒤에는 그럴 수 있습니다. PS 버튼을 누르면 무선으로 다시 연결됩니다.
+
+**패널에서 맞춘 트리거가 게임에도 남나요?**
+남지 않습니다. 해당 탭을 열어 둔 동안에만 적용되며, 게임이 실행 중이면 게임의 설정이 우선합니다.
+
+**서버로 무언가 보내나요?**
+보내지 않습니다. 계정도, 사용 기록 수집도, 업데이트 확인도 없습니다. 프로그램이 호스트 이름을 조회하는 것조차 할 수 없도록 만들어져 있습니다.
 
 ## 라이선스
 
-Hapticlink는 무료로 쓸 수 있다. 오픈 소스는 아니다: [LICENSE](LICENSE) 참고.
+Hapticlink는 무료로 사용하실 수 있습니다. 다만 오픈 소스는 아닙니다. 자세한 내용은 [LICENSE](LICENSE)를 참고해 주세요.
 
 ## 출처
 
 - 3D 모델: [PS5 Controller](https://sketchfab.com/3d-models/ps5-controller-b7bb9c5102a04cb0b1966c6d02bad7d6) by Taohid Animation, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-  부품 분리·이름 정리는 [Kollynce/dualsense-controller](https://github.com/Kollynce/dualsense-controller),
-  피벗·재질·버튼 기호 보정은 [MoniYeyu/dualsense-reactive-preview](https://github.com/MoniYeyu/dualsense-reactive-preview) 의 수정본을 그대로 사용.
+  부품 분리와 이름 정리는 [Kollynce/dualsense-controller](https://github.com/Kollynce/dualsense-controller),
+  피벗·재질·버튼 기호 보정은 [MoniYeyu/dualsense-reactive-preview](https://github.com/MoniYeyu/dualsense-reactive-preview)의 수정본을 그대로 사용했습니다.
 - [three.js](https://github.com/mrdoob/three.js): MIT.
 - 글꼴: [Pretendard](https://github.com/orioncactus/pretendard), SIL Open Font License 1.1.
 
-비공식 프로젝트. Sony Interactive Entertainment와 무관하며, PlayStation·DualSense 및 관련 로고는 각 권리자의 상표.
+비공식 프로젝트입니다. Sony Interactive Entertainment와 관련이 없으며, PlayStation·DualSense 및 관련 로고는 각 권리자의 상표입니다.
