@@ -3,11 +3,20 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases/download/v1.0.1/Hapticlink-Setup-1.0.1.exe"><img src="https://img.shields.io/badge/Download%20for%20Windows%20%C2%B7%201.0.1-2f7bff?style=for-the-badge" alt="Download for Windows · 1.0.1" height="44"></a>
+  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases/download/v1.0.2/Hapticlink-Setup-1.0.2.exe"><img src="https://img.shields.io/badge/Download%20for%20Windows%20%C2%B7%201.0.2-2f7bff?style=for-the-badge" alt="Download for Windows · 1.0.2" height="44"></a>
 </p>
 
 <p align="center">
   <sub>Windows 10/11, 64-bit · 161 MB · not code-signed yet: on the "Windows protected your PC" screen choose <i>More info</i>, then <i>Run anyway</i> · <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases">all releases</a></sub>
+</p>
+
+<p align="center">
+  <sub>Found a bug, or have a question? Please open an issue or send an email.</sub>
+</p>
+
+<p align="center">
+  <a href="mailto:hyunwoo02031@naver.com"><img src="https://img.shields.io/badge/Email-hyunwoo02031%40naver.com-2f7bff?style=for-the-badge" alt="Email: hyunwoo02031@naver.com"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/issues/new"><img src="https://img.shields.io/badge/GitHub-Open%20an%20issue-1b2233?style=for-the-badge" alt="Open an issue on GitHub"></a>
 </p>
 
 <p align="center">
@@ -18,7 +27,6 @@
 <h1 align="center">Hapticlink</h1>
 
 <p align="center">
-  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/stargazers"><img src="https://img.shields.io/github/stars/Johyeonwoooooooo/Hapticlink?style=flat-square&color=111111&label=stars" alt="Stars"></a>
   <img src="https://img.shields.io/badge/Windows-10%20%C2%B7%2011-111111?style=flat-square" alt="Windows 10, 11">
   <img src="https://img.shields.io/badge/on--device-no%20data%20sent-111111?style=flat-square" alt="On-device, no data sent">
   <img src="https://img.shields.io/badge/languages-%ED%95%9C%EA%B5%AD%EC%96%B4%20%C2%B7%20English-111111?style=flat-square" alt="Korean, English">
@@ -30,9 +38,32 @@ Hapticlink is a Windows program for the DualSense controller. It does two things
 
 **It lets a wireless pad work in games just like a wired one.** Pair your pad over Bluetooth, open Hapticlink, and start your game. Haptic feedback, adaptive triggers and the controller speaker all work, with no cable and no dongle.
 
-**It tells you whether a pad is healthy.** It is handy before buying a used pad, when you suspect stick drift, or after a repair. Simply follow what the screen asks, and it will tell you, part by part, whether each one is fine or faulty.
+**It tells you whether a pad is healthy.** It is handy when you suspect stick drift, or after a repair. Simply follow what the screen asks, and it will tell you, part by part, whether each one is fine or faulty.
 
-Everything stays on your PC. Hapticlink sends nothing about you or your computer anywhere, and makes no outside connections.
+Everything stays on your PC. Hapticlink sends nothing about you or your computer anywhere. It connects outside only when you ask it to update.
+
+## 0.7 ms ahead of the cable, on average
+
+![Average time for a button press to reach the PC, 1.27 ms: ahead of the cable (2.00 ms) and ahead of the dongle (2.28 ms)](docs/latency.jpg)
+
+One pad was connected by cable and through Hapticlink at the same time, and the moment each button input reached the PC was compared on both. These are the results over 248 button inputs. The dongle was measured the same way, over 275 button inputs.
+
+| | What you need | Wire | Setup | Button press arrives (average) | Inputs that beat the cable |
+| --- | --- | --- | --- | --- | --- |
+| **Hapticlink** | **Nothing** | **No** | **Run the installer** | **about 1.27 ms** | **63%** |
+| Cable | A USB cable | Yes | Plug it in | about 2.00 ms | - |
+| Extra hardware (Pico 2 W dongle) | A Pico 2 W board | No | Buy the board, flash firmware | about 2.28 ms | 27% |
+
+- The arrival times are worked out, not timed directly. A wired pad sends an input every 4 ms, so a press waits 2.00 ms on average; Hapticlink's figure is that minus the measured difference of 0.73 ms, and the dongle's is that plus its measured difference of 0.28 ms. Time spent inside the pad is the same either way and is left out.
+- By the median it arrived 0.70 ms sooner, and 88% of inputs were within 4 ms of the cable.
+- Hapticlink's processing delay is 1.43 ms (median), and at most 4.01 ms 95% of the time. One frame of a 60 fps game is 16.7 ms.
+- The slowest 5% arrived 3.75 ms later or more, and the latest input arrived 11.53 ms later.
+
+A wired DualSense reports every 4 ms, and over Bluetooth it reports every 1.25 ms. So even after the radio and Hapticlink, the wireless input arrives first on average. Wireless does stumble now and then, though: 5 inputs in 100 arrived 3.75 ms or more after the cable.
+
+The processing delay is the time Hapticlink takes to receive an input and pass it on to the game. It was measured three times, against reading the same pad over Bluetooth directly.
+
+The figures against the cable are one 60-second run each, for Hapticlink (v1.0.1) and for the dongle, on one PC. Your Bluetooth adapter and the radio environment around you can change the figures.
 
 ## Wireless, with everything a cable gives you
 
@@ -46,26 +77,9 @@ Hapticlink shows the game a wired DualSense and carries everything across to you
 - **A cable only charges**: you can plug one in mid-game and nothing changes. If you would like the cable's own quality for a session, one button switches to it, and unplugging the cable brings you back to wireless.
 - **It stays out of your way**: it sits quietly in the tray, can start with Windows if you wish, and puts everything back the way it was when you quit.
 
-## Input delay, measured against the cable
-
-![Wireless. Faster than the cable: a button press arrives 0.0007 s sooner than wired, on average](docs/latency.jpg)
-
-One pad was connected by cable and through Hapticlink at the same time, and the moment each button input reached the PC was compared on both. These are the results over 248 button inputs.
-
-| | Hapticlink, compared with the cable |
-| --- | --- |
-| Average | arrives 0.73 ms sooner |
-| Median | arrives 0.70 ms sooner |
-| Slowest 5% | arrive 3.75 ms later, or more |
-| Latest input | arrived 11.53 ms later |
-
-A wired DualSense reports every 4 ms, and over Bluetooth it reports every 1.25 ms. So even after the radio and Hapticlink, the wireless input arrives first on average. Wireless does stumble now and then, though: 5 inputs in 100 arrived 3.75 ms or more after the cable.
-
-This is one 60-second run of v1.0.1 on one PC. Your Bluetooth adapter and the radio environment around you can change the figures.
-
 ## A one-minute diagnosis
 
-![Motion stage: line the pad up with the amber target pose](docs/en/motion.png)
+![Touchpad stage: the cells you rub fill in with rainbow colours](docs/en/touchpad.png)
 
 There are five stages, one after another, and just one rule: **follow the amber and you pass.**
 
@@ -125,6 +139,7 @@ Please download the installer from the button at the top, or from [Releases](htt
 - Windows may ask you to restart.
 - The first time it runs, Hapticlink asks which language to use and whether it should start with Windows. You can change both later.
 - The build is not code-signed yet. If you see the "Windows protected your PC" screen, please choose *More info*, then *Run anyway*.
+- New versions come through *Update* on the About tab. It needs an internet connection and keeps your settings. You can go back to an older version there too.
 - Uninstalling also removes the drivers this installer put in. Drivers that were already on your PC are left untouched.
 
 ## Frequently asked questions
@@ -145,12 +160,12 @@ This can happen after using the cable directly. Just press the PS button and the
 No, they do not. They apply only while that tab is open, and a running game's own settings take priority.
 
 **Does it send anything to a server?**
-No, it does not. There are no accounts, no telemetry and no update checks. The program is built so that it cannot even look up a host name.
+No, it does not. There are no accounts, no telemetry and no automatic update checks. It connects outside only when you press Update on the About tab, to get the list of versions and the installer from GitHub. The part that draws the screen is built so that it cannot even look up a host name.
 
 ## Contact
 
 <p>
-  <a href="mailto:hyunwoo02031@naver.com"><img src="https://img.shields.io/badge/Email-hyunwoo02031%40naver.com-2f7bff?style=for-the-badge" alt="Email: hyunwoo02031@naver.com"></a>
+  <a href="mailto:hyunwoo02031@naver.com"><img src="https://img.shields.io/badge/Email-hyunwoo02031%40naver.com-2f7bff?style=for-the-badge" alt="Email: hyunwoo02031@naver.com"></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/Johyeonwoooooooo/Hapticlink/issues/new"><img src="https://img.shields.io/badge/GitHub-Open%20an%20issue-1b2233?style=for-the-badge" alt="Open an issue on GitHub"></a>
 </p>
 
@@ -171,8 +186,8 @@ Hapticlink is free for you to use. It is not open source, however; please see [L
 
 - 3D model: [PS5 Controller](https://sketchfab.com/3d-models/ps5-controller-b7bb9c5102a04cb0b1966c6d02bad7d6) by Taohid Animation, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
   Parts were separated and named by [Kollynce/dualsense-controller](https://github.com/Kollynce/dualsense-controller);
-  pivots, materials and button glyphs were corrected by [MoniYeyu/dualsense-reactive-preview](https://github.com/MoniYeyu/dualsense-reactive-preview), whose version is used as is.
+  pivots, materials and button glyphs were corrected by [MoniYeyu/dualsense-reactive-preview](https://github.com/MoniYeyu/dualsense-reactive-preview), whose version is used with the PlayStation logo and the button symbols (△○×□) removed.
 - [three.js](https://github.com/mrdoob/three.js): MIT.
 - Font: [Pretendard](https://github.com/orioncactus/pretendard), SIL Open Font License 1.1.
 
-This is an unofficial project and is not affiliated with Sony Interactive Entertainment. PlayStation, DualSense and related logos are trademarks of their respective owners.
+This is an unofficial project and is not affiliated with Sony Interactive Entertainment. PlayStation, DualSense and PS5 are trademarks or registered trademarks of Sony Interactive Entertainment Inc.

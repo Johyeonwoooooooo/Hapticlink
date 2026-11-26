@@ -3,11 +3,20 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases/download/v1.0.1/Hapticlink-Setup-1.0.1.exe"><img src="https://img.shields.io/badge/Windows%EC%9A%A9%20%EB%82%B4%EB%A0%A4%EB%B0%9B%EA%B8%B0%20%C2%B7%201.0.1-2f7bff?style=for-the-badge" alt="Windows용 내려받기 · 1.0.1" height="44"></a>
+  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases/download/v1.0.2/Hapticlink-Setup-1.0.2.exe"><img src="https://img.shields.io/badge/Windows%EC%9A%A9%20%EB%82%B4%EB%A0%A4%EB%B0%9B%EA%B8%B0%20%C2%B7%201.0.2-2f7bff?style=for-the-badge" alt="Windows용 내려받기 · 1.0.2" height="44"></a>
 </p>
 
 <p align="center">
   <sub>Windows 10/11 64비트 · 161 MB · 아직 코드 서명 없음: "Windows의 PC 보호" 창에서 <i>추가 정보</i> → <i>실행</i> · <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases">모든 릴리스</a></sub>
+</p>
+
+<p align="center">
+  <sub>버그를 발견하셨거나 궁금한 점이 있으면 이슈나 이메일로 알려 주세요.</sub>
+</p>
+
+<p align="center">
+  <a href="mailto:hyunwoo02031@naver.com"><img src="https://img.shields.io/badge/Email-hyunwoo02031%40naver.com-2f7bff?style=for-the-badge" alt="이메일: hyunwoo02031@naver.com"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/issues/new"><img src="https://img.shields.io/badge/GitHub-%EC%9D%B4%EC%8A%88%20%EB%82%A8%EA%B8%B0%EA%B8%B0-1b2233?style=for-the-badge" alt="GitHub에 이슈 남기기"></a>
 </p>
 
 <p align="center">
@@ -18,7 +27,6 @@
 <h1 align="center">Hapticlink</h1>
 
 <p align="center">
-  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/stargazers"><img src="https://img.shields.io/github/stars/Johyeonwoooooooo/Hapticlink?style=flat-square&color=111111&label=stars" alt="Stars"></a>
   <img src="https://img.shields.io/badge/Windows-10%20%C2%B7%2011-111111?style=flat-square" alt="Windows 10, 11">
   <img src="https://img.shields.io/badge/%EC%98%A8%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4-%EC%99%B8%EB%B6%80%20%EC%A0%84%EC%86%A1%20%EC%97%86%EC%9D%8C-111111?style=flat-square" alt="온디바이스, 외부 전송 없음">
   <img src="https://img.shields.io/badge/%EC%96%B8%EC%96%B4-%ED%95%9C%EA%B5%AD%EC%96%B4%20%C2%B7%20English-111111?style=flat-square" alt="한국어, English">
@@ -30,11 +38,34 @@ Hapticlink는 DualSense 컨트롤러를 위한 Windows 프로그램입니다. �
 
 **무선 패드를 게임에서 유선처럼 쓸 수 있게 해 줍니다.** 패드를 블루투스로 연결하고 Hapticlink를 켠 뒤 게임을 시작하면 됩니다. 햅틱 피드백, 적응형 트리거, 패드 스피커가 케이블도 동글도 없이 동작합니다.
 
-**패드가 멀쩡한지 알려 드립니다.** 중고 패드를 사기 전, 스틱 쏠림이 의심될 때, 수리를 받은 뒤에 써 보세요. 화면의 안내를 따라 하면 부품별로 정상인지 이상인지 알 수 있습니다.
+**패드가 멀쩡한지 알려 드립니다.** 스틱 쏠림이 의심될 때, 수리를 받은 뒤에 써 보세요. 화면의 안내를 따라 하면 부품별로 정상인지 이상인지 알 수 있습니다.
 
-모든 일은 내 PC 안에서 끝납니다. Hapticlink는 사용자와 컴퓨터에 관한 어떤 정보도 밖으로 보내지 않으며, 외부로 연결하지 않습니다.
+모든 일은 내 PC 안에서 끝납니다. Hapticlink는 사용자와 컴퓨터에 관한 어떤 정보도 밖으로 보내지 않습니다. 외부에 연결하는 것은 직접 업데이트를 누를 때뿐입니다.
 
-## 무선인데, 유선에서 되던 것이 다 됩니다
+## 유선보다 평균 0.7 ms 앞선 입력
+
+![버튼 입력이 PC에 도착하는 평균 시간 1.27 ms: 유선(2.00 ms)보다도, 동글(2.28 ms)보다도 먼저](docs/latency.ko.jpg)
+
+패드 하나를 케이블과 Hapticlink에 동시에 연결한 뒤, 같은 버튼 입력이 각각 PC에 도착한 시각을 비교했습니다. 버튼 입력 248회의 결과입니다. 동글도 같은 방법으로 버튼 입력 275회를 쟀습니다.
+
+| | 필요한 것 | 선 | 준비 | 버튼 입력 도착 (평균) | 유선보다 먼저 온 입력 |
+| --- | --- | --- | --- | --- | --- |
+| **Hapticlink** | **없음** | **없음** | **설치 파일 실행** | **약 1.27 ms** | **63%** |
+| 유선 | USB 케이블 | 있음 | 케이블 꽂기 | 약 2.00 ms | - |
+| 추가 하드웨어 (Pico 2 W 동글) | Pico 2 W 보드 | 없음 | 보드 구매, 펌웨어 설치 | 약 2.28 ms | 27% |
+
+- 도착 시간은 계산한 값입니다. 유선 패드는 4 ms마다 입력을 보내므로 버튼을 누른 뒤 평균 2.00 ms를 기다립니다. Hapticlink는 여기서 측정한 차이 0.73 ms를 뺐고, 동글은 측정한 차이 0.28 ms를 더했습니다. 패드 안에서 걸리는 시간은 양쪽이 같아서 넣지 않았습니다.
+- 중앙값으로는 0.70 ms 먼저 도착했고, 입력의 88%는 유선과의 차이가 4 ms 이내였습니다.
+- Hapticlink 처리 지연은 1.43 ms(중앙값)이고, 95%는 4.01 ms 이내입니다. 60 fps 게임의 한 프레임은 16.7 ms입니다.
+- 가장 느린 5%는 3.75 ms 이상 늦었고, 가장 늦은 입력은 11.53 ms 늦었습니다.
+
+유선 DualSense는 4 ms마다, 블루투스는 1.25 ms마다 입력을 보냅니다. 그래서 전파와 Hapticlink를 거치고도 평균적으로는 무선 쪽이 먼저 도착합니다. 다만 무선은 가끔 끊깁니다. 입력 100번 중 5번은 유선보다 3.75 ms 이상 늦었습니다.
+
+처리 지연은 Hapticlink가 입력을 받아 게임에 넘기는 데 걸리는 시간입니다. 같은 패드를 블루투스로 직접 읽었을 때와 비교해 세 번 잰 값입니다.
+
+유선 대비 수치는 PC 한 대에서 Hapticlink(v1.0.1)와 동글을 각각 60초 동안 한 번씩 측정한 값이며, 블루투스 어댑터와 주변 무선 환경에 따라 달라질 수 있습니다.
+
+## 케이블 없이, 유선 그대로
 
 ![게임 연결 탭: 스위치, 패드와 게임 상태, 햅틱 세기, 케이블과 자동 실행 설정](docs/game.png)
 
@@ -46,26 +77,9 @@ Hapticlink는 게임에 유선 DualSense를 보여 주고, 게임이 보내는 �
 - **케이블은 충전만**: 게임 도중에 케이블을 꽂아도 아무것도 바뀌지 않습니다. 유선 품질로 쓰고 싶을 때는 버튼 하나로 전환할 수 있고, 케이블을 뽑으면 다시 무선으로 돌아옵니다.
 - **방해하지 않습니다**: 트레이에 조용히 머물고, Windows를 시작할 때 함께 켜지도록 할 수 있으며, 종료하면 모든 것을 원래대로 돌려놓습니다.
 
-## 입력 지연을 유선과 비교했습니다
-
-![무선인데, 유선보다 빠릅니다: 버튼 입력이 유선보다 평균 0.0007초 먼저 도착](docs/latency.ko.jpg)
-
-패드 하나를 케이블과 Hapticlink에 동시에 연결한 뒤, 같은 버튼 입력이 각각 PC에 도착한 시각을 비교했습니다. 버튼 입력 248회의 결과입니다.
-
-| | Hapticlink가 유선보다 |
-| --- | --- |
-| 평균 | 0.73 ms 먼저 도착 |
-| 중앙값 | 0.70 ms 먼저 도착 |
-| 가장 느린 5% | 3.75 ms 이상 늦게 도착 |
-| 가장 늦은 입력 | 11.53 ms 늦게 도착 |
-
-유선 DualSense는 4 ms마다, 블루투스는 1.25 ms마다 입력을 보냅니다. 그래서 전파와 Hapticlink를 거치고도 평균적으로는 무선 쪽이 먼저 도착합니다. 다만 무선은 가끔 끊깁니다. 입력 100번 중 5번은 유선보다 3.75 ms 이상 늦었습니다.
-
-v1.0.1을 PC 한 대에서 60초 동안 한 번 측정한 값이며, 블루투스 어댑터와 주변 무선 환경에 따라 달라질 수 있습니다.
-
 ## 1분 진단
 
-![모션 센서 단계: 주황색 목표 자세에 패드를 겹친다](docs/motion.png)
+![터치패드 단계: 문지른 칸이 무지개색으로 채워진다](docs/touchpad.png)
 
 다섯 단계가 차례로 진행됩니다. 규칙은 하나뿐입니다. **주황색을 따라가면 통과합니다.**
 
@@ -83,13 +97,13 @@ v1.0.1을 PC 한 대에서 60초 동안 한 번 측정한 값이며, 블루투�
 
 스틱이 지나간 범위는 그대로 도형이 됩니다. 찌그러진 곳이 스틱이 닿지 않는 방향입니다.
 
-## 결과는 부품별로 알려 드립니다
+## 부품별 진단 결과
 
 ![결과표: 부품마다 정상 또는 이상, 그리고 수치](docs/result.png)
 
 진단이 끝나면 카드 다섯 장이 남습니다. 정상이면 수치가, 이상이면 무엇이 안 됐는지가 적힙니다. "L3 입력 안 됨", "R 스틱 ↗ 방향 끝까지 안 닿음" 같은 식입니다. 판매 글이나 A/S 접수에 그대로 붙여 쓰셔도 좋습니다.
 
-## 트리거와 진동을 눈으로 확인하세요
+## 눈으로 보는 트리거와 진동
 
 ![체험 탭: 트리거 저항 곡선과 모터 파형](docs/play.png)
 
@@ -125,6 +139,7 @@ PS5도, 지원 게임도 필요하지 않습니다.
 - Windows를 다시 시작해야 할 수 있습니다.
 - 처음 실행하면 사용할 언어와 Windows를 시작할 때 함께 켤지를 묻습니다. 둘 다 나중에 바꿀 수 있습니다.
 - 아직 코드 서명이 되어 있지 않습니다. "Windows의 PC 보호" 창이 뜨면 *추가 정보* → *실행*을 눌러 주세요.
+- 새 버전은 정보 탭의 *업데이트*에서 받을 수 있습니다. 인터넷 연결이 필요하며, 설정은 그대로 남습니다. 더 낮은 버전으로 되돌릴 수도 있습니다.
 - 프로그램을 제거하면 이 설치 파일이 넣은 드라이버도 함께 지워집니다. 원래 PC에 있던 드라이버는 건드리지 않습니다.
 
 ## 자주 묻는 질문
@@ -145,12 +160,12 @@ PC에서 유선 DualSense의 햅틱과 적응형 트리거를 지원하는 게�
 남지 않습니다. 해당 탭을 열어 둔 동안에만 적용되며, 게임이 실행 중이면 게임의 설정이 우선합니다.
 
 **서버로 무언가 보내나요?**
-보내지 않습니다. 계정도, 사용 기록 수집도, 업데이트 확인도 없습니다. 프로그램이 호스트 이름을 조회하는 것조차 할 수 없도록 만들어져 있습니다.
+보내지 않습니다. 계정도, 사용 기록 수집도, 자동 업데이트 확인도 없습니다. 외부에 연결하는 것은 정보 탭에서 직접 업데이트를 누를 때뿐이며, 그때 GitHub에서 버전 목록과 설치 파일을 받습니다. 화면을 그리는 부분은 호스트 이름을 조회하는 것조차 할 수 없도록 만들어져 있습니다.
 
 ## 문의
 
 <p>
-  <a href="mailto:hyunwoo02031@naver.com"><img src="https://img.shields.io/badge/Email-hyunwoo02031%40naver.com-2f7bff?style=for-the-badge" alt="이메일: hyunwoo02031@naver.com"></a>
+  <a href="mailto:hyunwoo02031@naver.com"><img src="https://img.shields.io/badge/Email-hyunwoo02031%40naver.com-2f7bff?style=for-the-badge" alt="이메일: hyunwoo02031@naver.com"></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/Johyeonwoooooooo/Hapticlink/issues/new"><img src="https://img.shields.io/badge/GitHub-%EC%9D%B4%EC%8A%88%20%EB%82%A8%EA%B8%B0%EA%B8%B0-1b2233?style=for-the-badge" alt="GitHub에 이슈 남기기"></a>
 </p>
 
@@ -171,8 +186,8 @@ Hapticlink는 무료로 사용하실 수 있습니다. 다만 오픈 소스는 �
 
 - 3D 모델: [PS5 Controller](https://sketchfab.com/3d-models/ps5-controller-b7bb9c5102a04cb0b1966c6d02bad7d6) by Taohid Animation, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
   부품 분리와 이름 정리는 [Kollynce/dualsense-controller](https://github.com/Kollynce/dualsense-controller),
-  피벗·재질·버튼 기호 보정은 [MoniYeyu/dualsense-reactive-preview](https://github.com/MoniYeyu/dualsense-reactive-preview)의 수정본을 그대로 사용했습니다.
+  피벗·재질·버튼 기호 보정은 [MoniYeyu/dualsense-reactive-preview](https://github.com/MoniYeyu/dualsense-reactive-preview)의 수정본에서 PlayStation 로고와 버튼 기호(△○×□)를 지워서 사용했습니다.
 - [three.js](https://github.com/mrdoob/three.js): MIT.
 - 글꼴: [Pretendard](https://github.com/orioncactus/pretendard), SIL Open Font License 1.1.
 
-비공식 프로젝트입니다. Sony Interactive Entertainment와 관련이 없으며, PlayStation·DualSense 및 관련 로고는 각 권리자의 상표입니다.
+비공식 프로젝트입니다. Sony Interactive Entertainment와 관련이 없으며, PlayStation, DualSense, PS5는 Sony Interactive Entertainment Inc.의 상표 또는 등록 상표입니다.
