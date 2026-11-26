@@ -46,6 +46,23 @@ Hapticlink shows the game a wired DualSense and carries everything across to you
 - **A cable only charges**: you can plug one in mid-game and nothing changes. If you would like the cable's own quality for a session, one button switches to it, and unplugging the cable brings you back to wireless.
 - **It stays out of your way**: it sits quietly in the tray, can start with Windows if you wish, and puts everything back the way it was when you quit.
 
+## Input delay, measured against the cable
+
+![Wireless. Faster than the cable: a button press arrives 0.0007 s sooner than wired, on average](docs/latency.jpg)
+
+One pad was connected by cable and through Hapticlink at the same time, and the moment each button input reached the PC was compared on both. These are the results over 248 button inputs.
+
+| | Hapticlink, compared with the cable |
+| --- | --- |
+| Average | arrives 0.73 ms sooner |
+| Median | arrives 0.70 ms sooner |
+| Slowest 5% | arrive 3.75 ms later, or more |
+| Latest input | arrived 11.53 ms later |
+
+A wired DualSense reports every 4 ms, and over Bluetooth it reports every 1.25 ms. So even after the radio and Hapticlink, the wireless input arrives first on average. Wireless does stumble now and then, though: 5 inputs in 100 arrived 3.75 ms or more after the cable.
+
+This is one 60-second run of v1.0.1 on one PC. Your Bluetooth adapter and the radio environment around you can change the figures.
+
 ## A one-minute diagnosis
 
 ![Motion stage: line the pad up with the amber target pose](docs/en/motion.png)
