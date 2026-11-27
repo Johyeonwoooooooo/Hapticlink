@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases/download/v1.0.2/Hapticlink-Setup-1.0.2.exe"><img src="https://img.shields.io/badge/Download%20for%20Windows%20%C2%B7%201.0.2-2f7bff?style=for-the-badge" alt="Download for Windows · 1.0.2" height="44"></a>
+  <a href="https://github.com/Johyeonwoooooooo/Hapticlink/releases/download/v1.0.3/Hapticlink-Setup-1.0.3.exe"><img src="https://img.shields.io/badge/Download%20for%20Windows%20%C2%B7%201.0.3-2f7bff?style=for-the-badge" alt="Download for Windows · 1.0.3" height="44"></a>
 </p>
 
 <p align="center">
@@ -42,28 +42,42 @@ Hapticlink is a Windows program for the DualSense controller. It does two things
 
 Everything stays on your PC. Hapticlink sends nothing about you or your computer anywhere. It connects outside only when you ask it to update.
 
-## 0.7 ms ahead of the cable, on average
+## 2 ms ahead of the cable, on average
 
-![Average time for a button press to reach the PC, 1.27 ms: ahead of the cable (2.00 ms) and ahead of the dongle (2.28 ms)](docs/latency.jpg)
+![A button press arrives 2.05 ms ahead of the cable on average. Time between inputs sent: Hapticlink 1.25 ms, dongle 2.00 ms, cable 4.00 ms](docs/latency.jpg)
 
-One pad was connected by cable and through Hapticlink at the same time, and the moment each button input reached the PC was compared on both. These are the results over 248 button inputs. The dongle was measured the same way, over 275 button inputs.
+One pad was connected by cable and through Hapticlink at the same time, and the moment each button input reached the PC was compared on both. The dongle was measured the same way.
 
-| | What you need | Wire | Setup | Button press arrives (average) | Inputs that beat the cable |
-| --- | --- | --- | --- | --- | --- |
-| **Hapticlink** | **Nothing** | **No** | **Run the installer** | **about 1.27 ms** | **63%** |
-| Cable | A USB cable | Yes | Plug it in | about 2.00 ms | - |
-| Extra hardware (Pico 2 W dongle) | A Pico 2 W board | No | Buy the board, flash firmware | about 2.28 ms | 27% |
+| | What you need | Wire | Setup | Time between inputs | Against the cable (average) | Inputs that beat the cable |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Hapticlink** | **Nothing** | **No** | **Run the installer** | **1.25 ms** | **2.05 ms sooner** | **94%** |
+| Cable | A USB cable | Yes | Plug it in | 4.00 ms | the baseline | - |
+| Extra hardware (Pico 2 W dongle) | A Pico 2 W board | No | Buy the board, flash firmware | 2.00 ms | 0.28 ms later | 27% |
 
-- The arrival times are worked out, not timed directly. A wired pad sends an input every 4 ms, so a press waits 2.00 ms on average; Hapticlink's figure is that minus the measured difference of 0.73 ms, and the dongle's is that plus its measured difference of 0.28 ms. Time spent inside the pad is the same either way and is left out.
-- By the median it arrived 0.70 ms sooner, and 88% of inputs were within 4 ms of the cable.
-- Hapticlink's processing delay is 1.43 ms (median), and at most 4.01 ms 95% of the time. One frame of a 60 fps game is 16.7 ms.
-- The slowest 5% arrived 3.75 ms later or more, and the latest input arrived 11.53 ms later.
+A wired DualSense reports every 4 ms, and over Bluetooth it reports every 1.25 ms. Hapticlink passes each Bluetooth input on to the game the moment it arrives. So even after the radio and Hapticlink, the wireless input arrives first most of the time.
 
-A wired DualSense reports every 4 ms, and over Bluetooth it reports every 1.25 ms. So even after the radio and Hapticlink, the wireless input arrives first on average. Wireless does stumble now and then, though: 5 inputs in 100 arrived 3.75 ms or more after the cable.
+- **Against the cable** is not a time from the moment of the press. It is how much sooner or later the same input arrived than it did over the cable. Time spent inside the pad is the same either way. By the median it was 2.46 ms sooner.
+- **Time between inputs** is how long passes from one input being sent to the next (median). Shorter means sent more often.
+- Hapticlink was measured over 566 button inputs, the dongle over 275.
 
-The processing delay is the time Hapticlink takes to receive an input and pass it on to the game. It was measured three times, against reading the same pad over Bluetooth directly.
+## As steady as Bluetooth itself
 
-The figures against the cable are one 60-second run each, for Hapticlink (v1.0.1) and for the dongle, on one PC. Your Bluetooth adapter and the radio environment around you can change the figures.
+![Delay Hapticlink adds on top of Bluetooth: 0.09 ms. Extra inputs lost to Hapticlink 0, ahead of the cable or within 4 ms of it 96.8%, latest input 13.80 ms](docs/stability.jpg)
+
+Going through Hapticlink makes no input later and loses none. The same pad was read over Bluetooth directly, side by side, to check.
+
+| | Result |
+| --- | --- |
+| Delay Hapticlink adds | 0.09 ms (median), at most 0.17 ms 95% of the time |
+| Extra inputs lost to Hapticlink | 0 |
+| Inputs ahead of the cable, or within 4 ms of it | 96.8% |
+| Latest input, against the cable | 13.80 ms |
+
+One frame of a 60 fps game is 16.7 ms. Of 566 button inputs, even the latest arrived within one frame.
+
+Wireless is not flawless the way a cable is, though. Bluetooth itself drops an input now and then, and at those moments it is behind the cable: 5 inputs in 100 arrived 1.53 ms or more after the cable.
+
+Every figure is one 60-second run each, for Hapticlink (v1.0.3) and for the dongle, on one PC. Your Bluetooth adapter and the radio environment around you can change the figures.
 
 ## Wireless, with everything a cable gives you
 
@@ -76,6 +90,32 @@ Hapticlink shows the game a wired DualSense and carries everything across to you
 - **Haptic strength**: you can adjust it from 0 to 300%, and it takes effect while you play.
 - **A cable only charges**: you can plug one in mid-game and nothing changes. If you would like the cable's own quality for a session, one button switches to it, and unplugging the cable brings you back to wireless.
 - **It stays out of your way**: it sits quietly in the tray, can start with Windows if you wish, and puts everything back the way it was when you quit.
+
+## The link, shown over your game
+
+![The overlay in four situations: most of the time (green, good), when the link stumbles (amber, fair, and why), with the battery at 20% or less (a red battery), and when you want the detail (inputs a second and the longest delay)](docs/en/overlay.png)
+
+Wireless stumbles now and then. The overlay shows, small and over your game, how the pad's Bluetooth link is doing right now. When input feels off, you can tell at once whether it is the pad.
+
+- **A colour to read at a glance**: green is good, amber is fair, red is poor. When it is fair or poor, the reason is shown beside it.
+- **Battery**: it shows the charge, and turns red at 20% or less.
+- **Only when needed**: set it to "Only when something is wrong" and it stays out of sight, appearing only when the link stumbles or the battery runs low. If you already use another overlay, your screen does not get crowded.
+- **Toggle it from anywhere**: a keyboard shortcut (Ctrl+Alt+H by default) or pad buttons (L1 + R1 + L2 + R2 + the touchpad click by default) switch it on and off in the middle of a game. Both can be changed.
+- **Put it where you like**: drag the grip at its right end to move it, and it snaps to the edges of the screen.
+
+![The overlay settings on the About tab: preview, what it shows, when it shows, size, position, keyboard shortcut and pad buttons](docs/en/overlay-settings.png)
+
+Choose how much it shows, Minimal, Normal or Diagnostic, or make your own. To make your own, drag the pieces up into the preview, drag them into another order, and drag one out to remove it. What you see there is the overlay.
+
+The overlay starts switched off, and is switched on from the About tab. It may not show over a game in exclusive full screen. If so, try the game in borderless window mode.
+
+## Let go of the pad, switch it off, pick which one
+
+![The About tab: the pad to use, powering off the connected pad, the overlay, updating](docs/en/about.png)
+
+- **Disconnect**: *Disconnect*, at the top of the window, makes Hapticlink let go of the pad. The pad stays on, as an ordinary Bluetooth pad. *Connect controller* takes it up again.
+- **Power off**: the About tab switches the connected pad off at once. No need to hold the PS button down after a game. Press the PS button to switch it back on.
+- **Pick a pad**: with several pads connected over Bluetooth, you can say which one Hapticlink uses. If the one you picked is off, it waits for it rather than taking another.
 
 ## A one-minute diagnosis
 
