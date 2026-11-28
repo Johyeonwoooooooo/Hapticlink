@@ -42,6 +42,21 @@ Hapticlink is a Windows program for the DualSense controller. It does two things
 
 Everything stays on your PC. Hapticlink sends nothing about you or your computer anywhere. It connects outside only when you ask it to update.
 
+## Watch on YouTube
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://youtu.be/buaXRxuwuzE"><img src="docs/video-intro.jpg" alt="Video: No dongle, wireless haptics. DualSense on PC over Bluetooth"></a></td>
+    <td width="50%"><a href="https://youtu.be/ffSqCBLcKko"><img src="docs/video-install.jpg" alt="Video: How to install Hapticlink"></a></td>
+  </tr>
+  <tr>
+    <td valign="top"><b><a href="https://youtu.be/buaXRxuwuzE">What Hapticlink does</a></b> (1:35)<br>Hear the pad with Bluetooth alone and then with Hapticlink on, and see the speed, the stability and the controller check.</td>
+    <td valign="top"><b><a href="https://youtu.be/ffSqCBLcKko">How to install</a></b> (1:29)<br>From the download to the first connection, including the Windows warning screen.</td>
+  </tr>
+</table>
+
+The videos are in English, with Korean audio and subtitles in English and Korean.
+
 ## 2 ms ahead of the cable, on average
 
 ![A button press arrives 2.05 ms ahead of the cable on average. Time between inputs sent: Hapticlink 1.25 ms, dongle 2.00 ms, cable 4.00 ms](docs/latency.jpg)

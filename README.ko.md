@@ -42,6 +42,21 @@ Hapticlink는 DualSense 컨트롤러를 위한 Windows 프로그램입니다. �
 
 모든 일은 내 PC 안에서 끝납니다. Hapticlink는 사용자와 컴퓨터에 관한 어떤 정보도 밖으로 보내지 않습니다. 외부에 연결하는 것은 직접 업데이트를 누를 때뿐입니다.
 
+## 유튜브로 보기
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://youtu.be/buaXRxuwuzE"><img src="docs/video-intro.ko.jpg" alt="영상: 동글 없이 무선 햅틱. 듀얼센스 PC 블루투스"></a></td>
+    <td width="50%"><a href="https://youtu.be/ffSqCBLcKko"><img src="docs/video-install.ko.jpg" alt="영상: Hapticlink 설치 방법 따라 하기"></a></td>
+  </tr>
+  <tr>
+    <td valign="top"><b><a href="https://youtu.be/buaXRxuwuzE">Hapticlink가 하는 일</a></b> (1:35)<br>블루투스만 연결했을 때와 Hapticlink를 켰을 때의 패드 소리를 들려 드리고, 속도와 안정성, 패드 점검을 보여 드립니다.</td>
+    <td valign="top"><b><a href="https://youtu.be/ffSqCBLcKko">설치 방법</a></b> (1:29)<br>내려받기부터 첫 연결까지, Windows 경고 창을 넘기는 방법도 함께 담았습니다.</td>
+  </tr>
+</table>
+
+영상에는 한국어 음성과 한국어 자막이 들어 있습니다. 음성은 재생 화면의 설정에서 바꿀 수 있습니다.
+
 ## 유선보다 평균 2 ms 앞선 입력
 
 ![버튼 입력이 유선보다 평균 2.05 ms 먼저 도착. 입력을 보내는 간격: Hapticlink 1.25 ms, 동글 2.00 ms, 유선 4.00 ms](docs/latency.ko.jpg)
